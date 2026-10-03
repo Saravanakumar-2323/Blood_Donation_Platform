@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate Blood - Uthiram</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header class="navbar">
+    <a href="home.html" class="logo-link">
+        <div class="logo">🩸Uthiram</div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="about.html">ABOUT US</a>
+      <a href="contact.html">CONTACT US</a>
+    </nav>
+    <div class="cta-buttons">
+      <a href="donate.html" class="donate-btn">Blood Donate</a>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="form-card-container donate-page-container">
+      <h2>Drop ur details here</h2>
+      <p>Fill this form and donate your blood to save billions of hearts!</p>
+      
+      <!-- FIX: Added id="donateForm" -->
+      <form id="donateForm">
+          <label for="name">Your Name*</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+
+          <label for="blood">Blood Group</label>
+          <input type="text" id="blood" placeholder="O+ve">
+
+          <label for="email">Email Address*</label>
+          <input type="email" id="email" placeholder="Email Address" required>
+
+          <label for="phone">Phone Number*</label>
+          <input type="text" id="phone" placeholder="8428573231" required>
+
+          <label for="city">City*</label>
+          <input type="text" id="city" placeholder="Salem" required>
+
+          <label for="message">Additional Message*</label>
+          <textarea id="message" placeholder="Enter your Message Here" required></textarea>
+
+          <button type="submit">Submit</button>
+      </form>
+    </div> 
+  </section>
+
+  <my-footer></my-footer>
+
+  <!-- FIX: Added form submission script -->
+  <script>
+document.getElementById('donateForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = {
+        name: document.getElementById('name').value,
+        blood_group: document.getElementById('blood').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        city: document.getElementById('city').value,
+        message: document.getElementById('message').value
+    };
+
+    try {
+        const response = await fetch('http://127.0.0.1:5000/api/donate', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            alert('Success: Registered as Blood Donor!');
+            document.getElementById('donateForm').reset();
+        } else {
+            alert('Error: ' + result.message);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Server Connection Failed!');
+    }
+});
+</script>
+
+  <script src="footer.js"></script>
+</body>
+</html>
