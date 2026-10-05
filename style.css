@@ -1,0 +1,709 @@
+/* ==========================================================================
+   1. GLOBAL / RESET STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  min-height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==========================================================================
+   2. NAVBAR & HEADER
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-right: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-buttons a {
+  margin-left: 15px;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.donate-btn {
+  color: white;
+  border: 1px solid black;
+  background-color: #e60000;
+}
+
+.donate-btn:hover {
+  background-color: yellow;
+}
+
+/* ==========================================================================
+   3. HOME PAGE SPECIFIC STYLES
+   ========================================================================== */
+.hero {
+  height: 100vh;
+  background: 
+    linear-gradient(rgba(230, 0, 0, 0.6), rgba(230, 0, 0, 0.6)), 
+    url('Banner.png') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+  padding: 0 60px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background-color: #e60000;
+  color: white;
+  padding: 14px 24px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.shortage-section {
+  background-color: #fde9e9;
+  padding: 60px 20px;
+}
+
+.text-area {
+  flex: 1.5;
+  padding: 20px;
+}
+
+.text-area h2 {
+  font-size: 36px;
+  color: #333;
+}
+
+.text-area .highlight {
+  color: #960000;
+}
+
+.text-area .highlight-strong {
+  color: red;
+  font-weight: bold;
+}
+
+.text-area p {
+  font-size: 20px;
+  color: #555;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.know-more-btn {
+  background-color: #d40000;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(212, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.know-more-btn:hover {
+  background-color: #b00000;
+}
+
+.impact-section {
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 80px 20px;
+}
+
+.impact-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.impact-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.impact-box h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.impact-box p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   4. ABOUT PAGE SPECIFIC STYLES
+   ========================================================================== */
+.about-hero-container {
+  height: 50vh;
+  background-color: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  position: relative;
+  padding: 0 20px;
+}
+
+.text-content {
+  font-size: 36px;
+}
+
+.intro-section {
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.tagline {
+  font-style: italic;
+  color: #a00000;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mission-vision-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.video-container {
+  flex: 1 1 45%;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.text-container {
+  flex: 1 1 45%;
+}
+
+.text-container h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.text-container p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.history-section,
+.activity-section {
+  margin-top: 40px;
+}
+
+.history-section h2,
+.activity-section h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.history-section p,
+.activity-section p {
+  text-align: justify;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   5. CONTACT & DONATE PAGE STYLES
+   ========================================================================== */
+.contact-body-bg {
+  background-color: #8b0000;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(230, 0, 0, 0.6), rgba(230, 0, 0, 0.6)),
+    url('Banner.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 120px 60px 60px;
+}
+
+.form-card-container {
+  background-color: #ffffff;
+  width: 400px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-page-container {
+  margin: 120px auto;
+}
+
+.form-card-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-page-container h2 {
+  color: #D2691E;
+}
+
+.donate-page-container h2 {
+  color: red;
+}
+
+.form-card-container p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+form label {
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+form input,
+form textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+  font-size: 14px;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-bottom: 1px solid #8b0000;
+}
+
+form textarea {
+  resize: none;
+  min-height: 60px;
+  margin-bottom: 20px;
+}
+
+form button {
+  background-color: #FF8C00;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: silver;
+}
+
+/* ==========================================================================
+   6. MODERN FOOTER STYLES
+   ========================================================================== */
+.footer {
+  background-color: #111111; /* Modern Dark Background */
+  color: #dddddd;
+  padding: 60px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h3.footer-logo {
+  font-size: 28px;
+  color: #ff3333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-col p.footer-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 35px;
+  height: 2px;
+  background-color: #e60000;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ff3333;
+  padding-left: 5px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-col p i {
+  color: #e60000;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  background-color: #222;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background-color: #e60000;
+  transform: translateY(-3px);
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid #333;
+  margin-bottom: 20px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #888;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-links span {
+  margin: 0 8px;
+  color: #444;
+}
+
+/* ==========================================
+   ABOUT US PAGE STYLES (NEW DESIGN)
+   ========================================== */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* About Hero */
+.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&q=80&w=1200') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about-hero h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* Quote Section */
+.quote-section {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.tagline-quote {
+  font-size: 20px;
+  font-style: italic;
+  color: #333;
+  line-height: 1.6;
+}
+
+.tagline-quote i {
+  color: #e60000;
+  margin: 0 10px;
+}
+
+/* Mission & Vision Cards */
+.mission-vision-section {
+  padding: 60px 0;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  border-top: 4px solid #e60000;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 36px;
+  color: #e60000;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #222;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: #e60000;
+  display: block;
+  margin: 8px auto 0;
+}
+
+/* History */
+.history-section {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.history-card {
+  background: #fff5f5;
+  border-left: 5px solid #e60000;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.history-badge {
+  display: inline-block;
+  background: #e60000;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.history-card p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Activities Grid */
+.activities-section {
+  padding: 60px 0;
+  background-color: #fdfdfd;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.activity-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+  border-color: #e60000;
+  box-shadow: 0 6px 18px rgba(230,0,0,0.12);
+}
+
+.act-icon {
+  font-size: 32px;
+  color: #e60000;
+  margin-bottom: 15px;
+}
+
+.activity-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.activity-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
